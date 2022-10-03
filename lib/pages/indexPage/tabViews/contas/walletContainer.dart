@@ -29,9 +29,19 @@ class WalletContainer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      '0',
-                      style: Theme.of(context).textTheme.headline1,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Text(
+                          '0',
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
+                        Text(
+                          ' €',
+                          style: Theme.of(context).textTheme.headline2,
+                        ),
+                      ],
                     ),
                     Text(
                       'Euro',
@@ -51,12 +61,13 @@ class WalletContainer extends StatelessWidget {
               ),
             ],
           ),
+          Padding(padding: EdgeInsets.fromLTRB(0, 15, 0, 0)),
           Padding(
             padding: padding,
             child: Row(
               children: [
                 SizedBox(
-                  height: 30,
+                  height: 35,
                   child: ElevatedButton(
                     onPressed: () {},
                     child: Row(
@@ -76,7 +87,7 @@ class WalletContainer extends StatelessWidget {
                   padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 35,
                   width: 30,
                   child: ElevatedButton(
                     onPressed: () {},
@@ -123,8 +134,13 @@ class WalletContainer extends StatelessWidget {
                   height: 10,
                   width: 10,
                 ).image),
-                subtitle: Text('Segunda, 5/09, 22:37 - Validação do Cartão',
-                    style: Theme.of(context).textTheme.subtitle2),
+                subtitle: Text(
+                  'Segunda, 5/09, 22:37 - Validação do Cartão',
+                  style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400),
+                ),
               )
             ],
           ),

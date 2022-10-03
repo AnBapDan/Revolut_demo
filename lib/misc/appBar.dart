@@ -3,6 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:homework1cm/misc/scrollableTab.dart';
+import 'package:homework1cm/pages/notificationsPage/notifications.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
   const CustomAppBar({Key? key}) : super(key: key);
@@ -19,8 +20,6 @@ class _CustomAppBarState extends State<CustomAppBar> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: AppBar(
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
         leading: Stack(
           alignment: Alignment.center,
           children: [
@@ -40,7 +39,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
           ),
           IconButton(
             iconSize: 30,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const NotificationsPage(),
+                ),
+              );
+            },
             icon: Icon(Icons.notifications),
           )
         ],

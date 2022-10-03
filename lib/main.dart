@@ -18,12 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Revolut Demo',
       theme: themes(),
-      routes: {
-        '/': (context) => IndexPage(title: "title"),
-        //'/transfer': (context) => TransferPage(),
-        //'/settings': (context) => ,
-      },
-      initialRoute: '/',
+      home: IndexPage(title: "title"),
     );
   }
 }
